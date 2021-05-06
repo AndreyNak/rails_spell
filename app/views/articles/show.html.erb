@@ -1,0 +1,15 @@
+<h1><%=  @article.title %></h1>
+<p><%=  @article.body %></p>
+<p><%= @text %></p>
+<hr>
+<%= link_to "Редактировать", edit_article_path(@article), class: 'btn btn-warning'%>
+<%= link_to "Удалить", article_path(@article),method: :delete,
+            data: {confirm: "Вы уверены ?"}, class: 'btn btn-danger'%>
+
+<p>
+    <strong>Comments</strong>
+    <%= render @article.comments %>
+</p>
+
+<h2>Добавить комментарий:</h2>
+<%= render 'comments/form' %>
