@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # rails_spell
+login: admin pass: 0000
